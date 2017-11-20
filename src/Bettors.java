@@ -1,9 +1,10 @@
+import java.awt.*;
+
 public  class  Bettors {
     private String playerName;
-    private String makeModel;
-    private String VehicleType;
-    private int amount;
-
+    private String Address;
+    private String AccountNumber ;
+    private int balance;
 
     public Bettors(){
         this("Unknown","Unknown","Unknown",0);
@@ -11,45 +12,55 @@ public  class  Bettors {
 
 
 
-    public Bettors(String playerName, String VehicleType,String makeModel, int amount){
+    public Bettors(String playerName, String Address, String AccountNumber, int balance){
         setPlayerName(playerName);
-        setMakeModel(makeModel);
-        setCarNum(VehicleType);
-        setAmount(amount);
-    }
-    public void setMakeModel(String Model){
-        this.makeModel = Model;
-    }
-    public String getMakeModel(){
-        return makeModel;
+        setAccountNumber(AccountNumber);
+        setAddress(Address);
+        setBalance(balance);
     }
 
-    public void setPlayerName(String Player){
-        this.playerName = Player;
+
+    public String getAccountNumber() {
+        return AccountNumber;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        AccountNumber = accountNumber;
     }
 
     public String getPlayerName() {
         return playerName;
     }
-    public void setCarNum(String Vehicle){
-        this.VehicleType = Vehicle;
-    }
 
-    public String getVehicleType() {
-        return VehicleType;
-    }
-
-    public void setAmount(int amount) {
-        this.amount = amount;
-    }
-
-    public int getAmount() {
-        return amount;
+    public void setPlayerName(String playerName) {
+        this.playerName = playerName;
     }
 
 
-    public String toString() {
-        return "Player Name:" + getPlayerName();
+    public String getAddress() {
+        return Address;
     }
+
+    public void setAddress(String address) {
+        Address = address;
+    }
+
+    public int getBalance() {
+        return balance;
+    }
+
+    public void setBalance(int balance) {
+        this.balance = balance;
+    }
+
+
+
+
+
+
+
+
+
+
 }
 

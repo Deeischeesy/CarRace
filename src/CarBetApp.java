@@ -1,103 +1,40 @@
+import java.awt.*;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.List;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
+public class CarBetApp{
+
+    private static Car[] allcars;
+    static List<Bettors> allBettors = new ArrayList<Bettors>();
+    Calendar cal = Calendar.getInstance();
+    SimpleDateFormat sdf = new SimpleDateFormat("HH: mm : ss");
 
 
+    public static void main(String args[]){
 
+        Bettors b1 = new Bettors("Joe Bloggs","Tralee","12345678T",1500);
+        allBettors.add(b1);
 
+        Bettors b2 = new Bettors("Jane Doe","Dingle","98765432K",2000);
+        allBettors.add(b2);
 
-public class CarBetApp extends Bettors{
+        Car c1 = new Car(10,10,20,10,5, Color.YELLOW);
+        Car c2 = new Car(10,30,20,10,5,Color.RED);
 
-
-    private static Plane makePlane;
-    private static Car makeCar;
-    private static Bus makeBus;
-    private static Truck makeTruck;
-    private static String makeBettor;
-
-    public static void main(String [] args) {
-        int i = 0;
-        List<Bettors> fleet = new ArrayList<Bettors>();
-        i = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of players"));
-        for (i = '0'; i > 5; i++) {
-            while (i >= 1) {
-                String answer = JOptionPane.showInputDialog("Enter your vehicle choice:");
-                if (answer.charAt(0) == 'B') {
-                    Bus bus = makeBus();
-                    fleet.add(bus);
-                    //public static new Bettors() {
-                    String playerName = JOptionPane.showInputDialog("Enter players name");
-                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
-                    //  Integer.toString(amount);
-                    Bettors bettor = new Bettors();
-                    break;
-
-                } else if (answer.charAt(0) == 'T') {
-                    Truck truck = makeTruck;
-                    fleet.add(truck);
-                    String playerName = JOptionPane.showInputDialog("Enter players name");
-                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
-                    // Integer.toString(amount);
-                    Bettors bettor = new Bettors();
-                    break;
-                } else if (answer.charAt(0) == 'P') {
-                    Plane plane = makePlane;
-                    fleet.add(plane);
-                    String playerName = JOptionPane.showInputDialog("Enter players name");
-                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
-                    //Integer.toString(amount);
-                    Bettors bettor = new Bettors();
-                    break;
-                } else if (answer.charAt(0) == 'C') {
-                    Car car = makeCar;
-                    fleet.add(car);
-                    String playerName = JOptionPane.showInputDialog("Enter players name");
-                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
-                    // Integer.toString(amount);
-                    Bettors bettor = new Bettors();
-                    break;
-
-
-                }
-                return Bettors;
-            }
-        }
-
+        BettingTransaction bt1 = new BettingTransaction("12345678T",sdf.format(cal.getTime()),c1,25,"unknown");
+        b1.getBets().add(bt1);
 
         String message = "";
-        for (Bettors b : fleet) {
+        for (Bettors b : allBettors) {
             message += b.toString();
         }
         JOptionPane.showMessageDialog(null, message);
     }
-        //return null;
-
-
-    private static Bus makeBus() {
-        return null;
-
-
-    }
-
-
-
-    private static Bettors makeBettor () {
-                String playerName;
-                String VehicleType;
-                int amount;
-                makeBettor = JOptionPane.showInputDialog("Enter Player:");
-                playerName = JOptionPane.showInputDialog("Enter Name");
-                VehicleType = JOptionPane.showInputDialog("Enter your Vehicle Choice");
-                amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your betting amount"));
-                Bettors bettor = new Bettors();
-                return bettor;
-            }
-
-
-        }
-
+}
 
 
 
