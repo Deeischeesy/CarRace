@@ -8,7 +8,7 @@ import javax.swing.JOptionPane;
 
 
 
-public class CarBetApp {
+public class CarBetApp extends Bettors{
 
 
     private static Plane makePlane;
@@ -18,39 +18,69 @@ public class CarBetApp {
     private static String makeBettor;
 
     public static void main(String [] args) {
-        //int i;
+        int i = 0;
         List<Bettors> fleet = new ArrayList<Bettors>();
-        //for (int i = 0; i <= 4; i++)
-            while (JOptionPane.showConfirmDialog(null, "Enter a new Player ?:") == JOptionPane.YES_OPTION) {
-
-
-                String answer = JOptionPane.showInputDialog("Bus(B) or Truck(T) or Plane(P) or Car(C)");
+        i = Integer.parseInt(JOptionPane.showInputDialog(null, "Enter the number of players"));
+        for (i = '0'; i > 5; i++) {
+            while (i >= 1) {
+                String answer = JOptionPane.showInputDialog("Enter your vehicle choice:");
                 if (answer.charAt(0) == 'B') {
                     Bus bus = makeBus();
                     fleet.add(bus);
+                    //public static new Bettors() {
+                    String playerName = JOptionPane.showInputDialog("Enter players name");
+                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
+                    //  Integer.toString(amount);
+                    Bettors bettor = new Bettors();
+                    break;
+
                 } else if (answer.charAt(0) == 'T') {
                     Truck truck = makeTruck;
                     fleet.add(truck);
+                    String playerName = JOptionPane.showInputDialog("Enter players name");
+                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
+                    // Integer.toString(amount);
+                    Bettors bettor = new Bettors();
+                    break;
                 } else if (answer.charAt(0) == 'P') {
                     Plane plane = makePlane;
                     fleet.add(plane);
+                    String playerName = JOptionPane.showInputDialog("Enter players name");
+                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
+                    //Integer.toString(amount);
+                    Bettors bettor = new Bettors();
+                    break;
                 } else if (answer.charAt(0) == 'C') {
                     Car car = makeCar;
                     fleet.add(car);
+                    String playerName = JOptionPane.showInputDialog("Enter players name");
+                    int amount = Integer.parseInt(JOptionPane.showInputDialog("Enter your amount"));
+                    // Integer.toString(amount);
+                    Bettors bettor = new Bettors();
+                    break;
+
+
                 }
-
-
-            }  String message = "";
-                for (Bettors b : fleet) {
-                    message += b.toString();
-                }
-                JOptionPane.showMessageDialog(null, message);
-
+                return Bettors;
             }
+        }
+
+
+        String message = "";
+        for (Bettors b : fleet) {
+            message += b.toString();
+        }
+        JOptionPane.showMessageDialog(null, message);
+    }
+        //return null;
+
 
     private static Bus makeBus() {
         return null;
+
+
     }
+
 
 
     private static Bettors makeBettor () {
