@@ -17,23 +17,38 @@ public class CarBetApp extends Bettors {
 
 
     public static void main(String args[]){
+
+        Car c1 = new Car(10,10.0f,20.0f,10,5,10.0f,Color.YELLOW,20.0f);
+        Car c2 = new Car(10,30.0f,20.0f,10,5,10.0f,Color.RED,30.0f);
+
         List<Bettors> allBettors = new ArrayList<Bettors>();
+        BettingTransaction bet1 = new BettingTransaction("12345678T",  c1, 15f,  "Lose",  "13:15:23");
+        BettingTransaction bet2 = new BettingTransaction("12345678T",  c2, 5f, "Lose", "13:16:28");
 
-        Bettors b1 = new Bettors(JOptionPane.showMessageDialog(null,"Joe Bloggs/n"+"Tralee/n","12345678T/n",1500, ));
-               // JOptionPane.showMessageDialog(null,"Joe Bloggs/n"+"Tralee/n","12345678T/n",1500,"five");
-        allBettors.add(b1);
+        Bettors b1 = new Bettors("Joe Bloggs","Tralee","12345678T",1500,/*new ArrayList<BettingTransaction>()*/ new ArrayList<BettingTransaction>());
 
-        Bettors b2 = new Bettors("Jane Doe","Dingle","98765432K",2000,"six");
-        allBettors.add(b2);
+        b1.getBets().add(bet1); //adding the bets to Joe's array list of bets
+        b1.getBets().add(bet2);
 
-        Car c1 = new Car(10,10,20,10,5, Color.YELLOW);
-        Car c2 = new Car(10,30,20,10,5,Color.RED);
+        allBettors.add(b1); //adding Joe to the array list of bettors
 
-        BettingTransaction bt1 = new BettingTransaction("12345678T",sdf.format(cal.getTime()),c1,25,"unknown");
-        bt1.add();
+        Bettors b2 = new Bettors("Jane Doe","Dingle","98765432K",2000,/*new ArrayList<BettingTransaction>()*/ new ArrayList<BettingTransaction>());
 
-        BettingTransaction bt2 = new BettingTransaction("78901234T",sdf.format(cal.getTime()),c2,26,"unknown");
-        bt2.add();
+        allBettors.add(b2); //adding Jane to the array list of bettors
+
+
+
+        BettingTransaction bt1 = new BettingTransaction("12345678T", c2,30.0f,"win"," minutes");
+        b1.getBets().add(bt1);
+
+        BettingTransaction bt2 = new BettingTransaction("12345678S",c1,40.0f,"lost","minutes");
+        b2.getBets().add(bt2);
+
+        for(Bettors bettor : allBettors)
+            System.out.println(bettor);
+
+
+
 
         String message = "";
         for (Bettors b : allBettors) {

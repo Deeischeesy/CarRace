@@ -1,17 +1,37 @@
-import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
 public class BettingTransaction{
 
-    private String vehicle;
+    private String accountNumber;
+    private Car carSelected;
     private float stake;
-    private String outcome = "";
-    boolean win;
-    boolean lose;
-    private Component bets;
+    private String outcome;
+    private String time;
 
 
+    public void setTime(String time){
+        this.time=time;
+    }
+    public String getTime(){
+        return time;
+    }
+
+    public void setAccountNumber(String accountNumber) {
+        this.accountNumber = accountNumber;
+    }
+
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public void setCarSelected(Car carSelected) {
+        this.carSelected = carSelected;
+    }
+
+    public Car getCarSelected() {
+        return carSelected;
+    }
 
     public float getStake() {
         return stake;
@@ -21,13 +41,6 @@ public class BettingTransaction{
         this.stake = stake;
     }
 
-    public String getVehicle() {
-        return vehicle;
-    }
-
-    public void setVehicle(String vehicle) {
-        this.vehicle = vehicle;
-    }
 
 
     public String getOutcome() {
@@ -38,21 +51,6 @@ public class BettingTransaction{
         this.outcome = outcome;
     }
 
-    public boolean isWin() {
-        return win;
-    }
-
-    public void setWin(boolean win) {
-        this.win = win;
-    }
-
-    public boolean isLose() {
-        return lose;
-    }
-
-    public void setLose(boolean lose) {
-        this.lose = lose;
-    }
 
     public Calendar getCal() {
         return cal;
@@ -70,19 +68,26 @@ public class BettingTransaction{
         this.sdf = sdf;
     }
 
-   // public void setBets(Component bets){
-       // this.bets =bets;
+    // public void setBets(Component bets){
+    // this.bets =bets;
     //}
 
-   // public Component getBets() {
-      //  return bets;
+    // public Component getBets() {
+    //  return bets;
     //}
 
     Calendar cal = Calendar.getInstance();
     SimpleDateFormat sdf = new SimpleDateFormat("HH: mm : ss");
 
 
-    public BettingTransaction(String vehicle, String format, Car c1, int i, String unknown) {
+    public BettingTransaction(String accountNumber, Car carSelected, float stake, String outcome, String time) {
+        setAccountNumber(accountNumber);
+        setCarSelected(carSelected);
+        setStake(stake);
+        setOutcome(outcome);
+        setTime(time);
+
+        //fill in the rest here and create the corresponding mutators and accessors too, I've done some of it
     }
 
 
