@@ -5,18 +5,21 @@ public  class  Bettors {
     private String Address;
     private String AccountNumber ;
     private int balance;
+    private String bets;
+
 
     public Bettors(){
-        this("Unknown","Unknown","Unknown",0);
+        this("Unknown","Unknown","Unknown",0,"unknown" );
     }
 
 
 
-    public Bettors(String playerName, String Address, String AccountNumber, int balance){
+    public Bettors(String playerName, String Address, String AccountNumber, int balance, String bets){
         setPlayerName(playerName);
         setAccountNumber(AccountNumber);
         setAddress(Address);
         setBalance(balance);
+        setBets(bets);
     }
 
 
@@ -52,15 +55,12 @@ public  class  Bettors {
     public void setBalance(int balance) {
         this.balance = balance;
     }
+    public void setBets(String bets){
+        this.bets = bets;
+    }
 
-
-
-
-
-
-
-
-
-
+    public String getBets() {
+        return bets;
+    }
 }
 
