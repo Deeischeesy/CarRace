@@ -1,11 +1,26 @@
+
 import java.awt.*;
 
 public  class  Bettors {
-    private String playerName;
+    private  String playerName;
     private String Address;
     private String AccountNumber ;
     private int balance;
     private String bets;
+
+
+    @Override
+    public String toString() {
+        return "Bettors{" +
+                "playerName='" + playerName + '\'' +
+                ", Address='" + Address + '\'' +
+                ", AccountNumber='" + AccountNumber + '\'' +
+                ", balance=" + balance +
+                ", bets='" + bets + '\'' +
+                '}';
+    }
+
+
 
 
     public Bettors(){
@@ -62,5 +77,7 @@ public  class  Bettors {
     public String getBets() {
         return bets;
     }
+
+
 }
 

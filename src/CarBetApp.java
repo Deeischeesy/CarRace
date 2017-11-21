@@ -1,3 +1,5 @@
+import com.sun.xml.internal.ws.developer.MemberSubmissionEndpointReference;
+
 import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -6,17 +8,19 @@ import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
 
-public class CarBetApp {
+public class CarBetApp extends Bettors {
 
     private static Car[] allcars;
-    static List<Bettors> allBettors = new ArrayList<>();
+    static List<Bettors> allBettors = new ArrayList<Bettors>();
     static Calendar cal = Calendar.getInstance();
     static SimpleDateFormat sdf = new SimpleDateFormat("HH: mm : ss");
 
 
     public static void main(String args[]){
+        List<Bettors> allBettors = new ArrayList<Bettors>();
 
-        Bettors b1 = new Bettors("Joe Bloggs","Tralee","12345678T",1500,"five");
+        Bettors b1 = new Bettors(JOptionPane.showMessageDialog(null,"Joe Bloggs/n"+"Tralee/n","12345678T/n",1500, ));
+               // JOptionPane.showMessageDialog(null,"Joe Bloggs/n"+"Tralee/n","12345678T/n",1500,"five");
         allBettors.add(b1);
 
         Bettors b2 = new Bettors("Jane Doe","Dingle","98765432K",2000,"six");

@@ -2,7 +2,7 @@ import java.awt.*;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 
-public class BettingTransaction extends Bettors{
+public class BettingTransaction{
 
     private String vehicle;
     private float stake;
@@ -12,7 +12,7 @@ public class BettingTransaction extends Bettors{
     private Component bets;
 
 
-            ;
+
     public float getStake() {
         return stake;
     }
