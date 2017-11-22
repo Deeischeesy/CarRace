@@ -56,6 +56,18 @@ public class CarBetApp extends Bettors {
         }
         JOptionPane.showMessageDialog(null, message);
     }
+
+    public void UpdateGame(long gameTime, Point point) {
+    }
+
+    public void Draw(Graphics2D g2d, Point point) {
+    }
+
+    public void DrawGameOver(Graphics2D g2d, Point point) {
+    }
+
+    public void RestartGame() {
+    }
 }
 
 

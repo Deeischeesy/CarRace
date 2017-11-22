@@ -1,49 +1,70 @@
-import java.awt.Graphics;
-import java.awt.image.BufferedImage;
-import java.io.File;
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.EventQueue;
+import java.awt.image.BufferedImage;
 
-public class CarRaceGUI extends JPanel {
 
-    private JFrame frame;
+public class CarRaceGUI extends JFrame{
 
-    private BufferedImage image;
+    public static int frameWidth;
+    public static int frameHeight;
+    public static final long secInNanosec = 1000000000L;
+    public static final long milisecInNanosec = 1000000L;
+    private final int GAME_FPS = 60;
+    private final long GAME_UPDATE_PERIOD = secInNanosec / GAME_FPS;
+    public static enum GameState{STARTING, VISUALIZING, GAME_CONTENT_LOADING, MAIN_MENU, OPTIONS, PLAYING, GAMEOVER, DESTROYED}
+    public static GameState gameState;
+    private long gameTime;
+    // It is used for calculating elapsed time.
+    private long lastTime;
 
-    /**
-     * Launch the application.
-     */ {
-        try {
-            image = ImageIO.read(new File("image name and path"));
-        } catch (IOException ex) {
-            // handle exception...
+    // The actual game
+    //private Game game;
+    private BufferedImage BettingCarMenuImg;
+
+    public CarRaceGUI(){
+
+     super();
+
+    gameState = GameState.VISUALIZING;
+
+    //We start game in new thread.
+    Thread gameThread = new Thread() {
+        @Override
+        public void run(){
+            GameLoop();
         }
-    }
-    /**
-     * Create the application.
-     */
-    public CarRaceGUI() {
-        initialize();
-    }
 
-    /**
-     * Initialize the contents of the frame.
-     */
-    private void initialize() {
-        frame = new JFrame();
-        ImageIcon image = new
-                setBounds(100, 100, 450, 300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.getContentPane().setLayout(null);
-    }
-
-    private class setBounds extends ImageIcon {
-        public setBounds(int i, int i1, int i2, int i3) {
+        private void GameLoop() {
         }
+    };
+        gameThread.start();
+
+
+
+         //sets the title for the frame
+        this.setTitle("Racing Bets");
+        //setting the size for the frame
+        if(true){
+            //disabling decorations for the frame
+            this.setUndecorated(true);
+            //set the frame to full screen
+            this.setExtendedState(this.MAXIMIZED_BOTH);
+        }
+        else{
+            //size of the frame
+            this.setSize(800,600);
+            //put frame in the center of the screen
+            this.setLocationRelativeTo(null);
+            this.setResizable(false);
+        }
+
+        //exit the application when the user presses the exit button
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
+        this.setVisible(true);
+
+
+
+
     }
+
 }
-
