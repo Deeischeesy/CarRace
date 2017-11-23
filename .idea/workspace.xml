@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f934d3c6-4d10-4729-9d28-7e3e7836ec9f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CarRace/CarRaceGUI$setBounds.class" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CarRace/Bettors.class" afterPath="$PROJECT_DIR$/out/production/CarRace/Bettors.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CarRace/CarBetApp.class" afterPath="$PROJECT_DIR$/out/production/CarRace/CarBetApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/CarRace/CarRaceGUI.class" afterPath="$PROJECT_DIR$/out/production/CarRace/CarRaceGUI.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Bettors.java" afterPath="$PROJECT_DIR$/src/Bettors.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CarBetApp.java" afterPath="$PROJECT_DIR$/src/CarBetApp.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/CarRace/CarRaceGUI$GameState.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CarRaceGUI.java" afterPath="$PROJECT_DIR$/src/CarRaceGUI.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -92,13 +86,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CarRaceGUI.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CarRaceGUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/CarRaceGUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="205">
+              <caret line="77" column="78" lean-forward="false" selection-start-line="77" selection-start-column="78" selection-end-line="77" selection-end-column="78" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#748#749#0" expanded="true" />
+                <element signature="e#776#777#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,7 +112,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Framework.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Framework.java" pinned="false" current-in-tab="false">
         <entry file="file://$USER_HOME$/Desktop/shoot_the_duck/Framework.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="918">
@@ -186,11 +182,11 @@
         <option value="$PROJECT_DIR$/src/BettorsTest.groovy" />
         <option value="$PROJECT_DIR$/src/Car.java" />
         <option value="$PROJECT_DIR$/src/BettingTransaction.java" />
-        <option value="$PROJECT_DIR$/src/CarRaceGUI.java" />
         <option value="$PROJECT_DIR$/src/CarBetApp.java" />
         <option value="$PROJECT_DIR$/src/Framework.java" />
         <option value="$PROJECT_DIR$/src/Bettors.java" />
         <option value="$USER_HOME$/Desktop/shoot_the_duck/Framework.java" />
+        <option value="$PROJECT_DIR$/src/CarRaceGUI.java" />
       </list>
     </option>
   </component>
@@ -262,7 +258,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Bettors">
+  <component name="RunManager" selected="Application.CarRaceGUI">
     <configuration name="Bettors" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Bettors" />
@@ -280,6 +276,20 @@
     <configuration name="CarBetApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="CarBetApp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="CarRace" />
+      <envs />
+    </configuration>
+    <configuration name="CarRaceGUI" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" value="CarRaceGUI" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -372,14 +382,16 @@
       <properties />
       <listeners />
     </configuration>
-    <list size="2">
+    <list size="3">
       <item index="0" class="java.lang.String" itemvalue="Application.CarBetApp" />
       <item index="1" class="java.lang.String" itemvalue="Application.Bettors" />
+      <item index="2" class="java.lang.String" itemvalue="Application.CarRaceGUI" />
     </list>
     <recent_temporary>
-      <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Bettors" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CarBetApp" />
+      <list size="3">
+        <item index="0" class="java.lang.String" itemvalue="Application.CarRaceGUI" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Bettors" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CarBetApp" />
       </list>
     </recent_temporary>
   </component>
@@ -408,7 +420,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.50292826" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3296355" sideWeight="0.49707174" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -537,6 +549,8 @@
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -702,6 +716,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3553">
           <caret line="234" column="10" lean-forward="false" selection-start-line="234" selection-start-column="4" selection-end-line="234" selection-end-column="10" />
+          <folding>
+            <element signature="e#10065#10066#0" expanded="false" />
+            <element signature="e#10148#10149#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -835,20 +853,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CarRaceGUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Desktop/shoot_the_duck/Framework.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="918">
           <caret line="54" column="0" lean-forward="true" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#748#749#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CarRaceGUI.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="77" column="78" lean-forward="false" selection-start-line="77" selection-start-column="78" selection-end-line="77" selection-end-column="78" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#748#749#0" expanded="true" />
