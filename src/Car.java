@@ -5,22 +5,22 @@ import static java.awt.Color.black;
 
 public class Car  {
     private int number;
-    private float Position_X;
-    private float Position_Y;
+    private int Position_X;
+    private int Position_Y;
     private int width;
     private int height;
-    private float speed;
+    private int speed;
     private Color color;
     private float odds;
 
-    public Car(){
-        this(0,0.0f,0.0f,0,0,0.0f,Color.BLACK ,0.0f );
+    public Car(int number, float v, float v1, int width, int height, float v2, Color yellow, float odds){
+        this(0,0,0,0,0,0,Color.BLACK ,0f );
     }
 
 
 
 
-    public Car(int number, float Position_X, float Position_Y, int width, int height, float speed, Color color, float odds){
+    public Car(int number, int Position_X, int Position_Y, int width, int height, int speed, Color color, float odds){
         setNumber(number); //add mutator and accessor for this
         setPosition_X(Position_X);
         setPosition_Y(Position_Y);
@@ -31,19 +31,19 @@ public class Car  {
         setOdds(odds); //and this too
     }
 
-    public float getPosition_X() {
+    public int getPosition_X() {
         return Position_X;
     }
 
-    public void setPosition_X(float position_X) {
+    public void setPosition_X(int position_X) {
         Position_X = position_X;
     }
 
-    public float getPosition_Y() {
+    public int getPosition_Y() {
         return Position_Y;
     }
 
-    public void setPosition_Y(float position_Y) {
+    public void setPosition_Y(int position_Y) {
         Position_Y = position_Y;
     }
 
@@ -63,11 +63,11 @@ public class Car  {
         this.height = height;
     }
 
-    public float getSpeed() {
+    public int getSpeed() {
         return speed;
     }
 
-    public void setSpeed(float speed) {
+    public void setSpeed(int speed) {
         this.speed = speed;
     }
 
@@ -93,4 +93,18 @@ public class Car  {
     public void setOdds(float odds) {
         this.odds = odds;
     }
+
+    //JB - draw a car on screen
+    public void draw(Graphics g)
+    {
+        g.setColor(getColor());
+        g.fillRect(Position_X,Position_Y,width,height);
+    }
+
+    //JB - move car on a number of pixels
+    public void move(int units)
+    {
+        setPosition_X(getPosition_X() + units);
+    }
 }
+
