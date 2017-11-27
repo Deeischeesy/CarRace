@@ -22,15 +22,41 @@ public class CarRaceGUI extends JPanel{
                 }
             }
 
-            }
-        );}
+            } int lastX = 0;
+
+    new CarRaceGUI() {
+            Thread animationThread = new Thread(new Runnable() {
+                public void run() {
+                    while (true) {
+                        repaint();
+                        try {Thread.sleep(10);} catch (Exception ex) {}
+                    }
+                }
+            });
+
+            animationThread.start();
+        }
+
+    public void paintComponent(Graphics g) {
+        Graphics2D gg = (Graphics2D) g;
+
+        int w = getWidth();
+        int h = getHeight();
+
+        int trainW = 100;
+        int trainH = 10;
+        int trainSpeed = 3;
+        int lastX;
+
+        int x = lastX + trainSpeed;
 
 
-    /**
-     * Create the application.
-     */
+        /**
+         * Create the application.
+         */
     public CarRaceGUI() {
-        initialize();
+            initialize();
+        }
     }
 
     /**
@@ -98,4 +124,8 @@ public class CarRaceGUI extends JPanel{
         btnNewButton_5.setIcon(new ImageIcon("C:\\Users\\Gary\\Pictures\\images.jpg"));
 		frame.getContentPane().add(btnNewButton_5);
         }
+
+    private static class CarRaceGUI {
+        public AccessibleComponent frame;
     }
+}
