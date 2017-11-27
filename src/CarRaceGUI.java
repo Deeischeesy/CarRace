@@ -3,6 +3,7 @@ import java.awt.*;
 import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.util.Random;
 
 public class CarRaceGUI extends JFrame implements Runnable{
 
@@ -13,6 +14,13 @@ public class CarRaceGUI extends JFrame implements Runnable{
     Car[] cars;
     Graphics g;
     Container c;
+    private int xPosition;
+    private int yPosition;
+    private int xSpeed = 5;
+    private int ySpeed = 7;
+    private float speed = 1.0f;
+    private int xMovemeent;
+    private int yMovemeent;
 
     /**
      * Launch the application.
@@ -29,6 +37,8 @@ public class CarRaceGUI extends JFrame implements Runnable{
                                    }
                                }
         );}
+
+
 
 
     /**
@@ -89,11 +99,12 @@ public class CarRaceGUI extends JFrame implements Runnable{
 
         cars = new Car[10];
 
-        Car c1 = new Car(10, 10, 50, 20, 10, 10, Color.YELLOW, 20);
-        Car c2 = new Car(10, 10, 80, 20, 10, 10, Color.RED, 30);
+        Car c1 = new Car(10, 10, 50, 20, 10, createRandomSpeed() , Color.YELLOW, 20);
+        Car c2 = new Car(10, 10, 80, 20, 10, createRandomSpeed(), Color.RED, 30);
 
         cars[0] = c1;
         cars[1] = c2;
+
 
 
 
@@ -168,18 +179,22 @@ public class CarRaceGUI extends JFrame implements Runnable{
 
         while(gameOn)
         {
+
+
             try
             {
 
                 paint(g);
 
-                Thread.sleep(1000);
+                Thread.sleep(800);
             }
             catch (InterruptedException e)
 
             {
                 break;
             }
+
+            
         }
         System.out.println("Game now over!");
 
@@ -199,7 +214,15 @@ public class CarRaceGUI extends JFrame implements Runnable{
     }
 
 
+    public int createRandomSpeed(){
 
+        Random rand = new Random();
+
+        int  n = rand.nextInt(50) + 1;
+
+        return n;
+
+    }
 
 
 
