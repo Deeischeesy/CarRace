@@ -15,6 +15,10 @@ public class CarBetApp extends Bettors {
     static Calendar cal = Calendar.getInstance();
     static SimpleDateFormat sdf = new SimpleDateFormat("HH: mm : ss");
 
+    public CarBetApp(String playerName, String Address, String AccountNumber, int balance, ArrayList<BettingTransaction> bets) {
+        super(playerName, Address, AccountNumber, balance, bets);
+    }
+
 
     public static void main(String args[]) {
 

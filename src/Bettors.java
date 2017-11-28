@@ -31,7 +31,7 @@ public  class  Bettors {
 
 
 
-    public Bettors(){
+    public Bettors(String danielle_ryan, String tralee, String s, ArrayList<BettingTransaction> bettingTransactions){
         this("Unknown","Unknown","Unknown",0,new ArrayList<BettingTransaction>());
     }
 

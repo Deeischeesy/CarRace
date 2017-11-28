@@ -18,8 +18,8 @@ public class CarRaceGUI extends JFrame implements Runnable{
     Container c;
     private int xPosition;
     private int yPosition;
-    private int xSpeed = 5;
-    private int ySpeed = 7;
+    private int xSpeed = 0;
+    private int ySpeed = 0;
     private float speed = 1.0f;
     private int xMovemeent;
     private int yMovemeent;
@@ -77,7 +77,7 @@ public class CarRaceGUI extends JFrame implements Runnable{
         //c.setLayout(null);
         c.setBackground(Color.BLACK);
 
-        setPreferredSize(new Dimension(400, 400));
+        setPreferredSize(new Dimension(400, 600));
 
 
 
