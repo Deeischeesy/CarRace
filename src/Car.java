@@ -12,6 +12,25 @@ public class Car  {
     private int speed;
     private Color color;
     private float odds;
+    private int x;
+
+    public int getX() {
+        return x;
+    }
+
+    public void setX(int x) {
+        this.x = x;
+    }
+
+    public int getY() {
+        return y;
+    }
+
+    public void setY(int y) {
+        this.y = y;
+    }
+
+    private int y;
 
     public Car(int number, float v, float v1, int width, int height, float v2, Color yellow, float odds){
         this(0,0,0,0,0,0,Color.BLACK ,0f );
@@ -106,5 +125,8 @@ public class Car  {
     {
         setPosition_X(getPosition_X() + units);
     }
+
+
+
 }
 
