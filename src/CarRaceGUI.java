@@ -78,7 +78,7 @@ public class CarRaceGUI extends JFrame implements Runnable{
         //c.setLayout(null);
         c.setBackground(Color.BLACK);
 
-        setPreferredSize(new Dimension(400, 600));
+        setPreferredSize(new Dimension(1920, 1920));
 
 
 
@@ -90,10 +90,22 @@ public class CarRaceGUI extends JFrame implements Runnable{
 
         Car c1 = new Car(10, 10, 50, 20, 10, createRandomSpeed() * 2 , Color.YELLOW, 20);
         Car c2 = new Car(10, 10, 80, 20, 10, createRandomSpeed() * 2, Color.RED, 30);
+        Car c3 = new Car(10, 10, 110, 20, 10, createRandomSpeed() * 2 , Color.BLUE, 20);
+        Car c4 = new Car(10, 10, 140, 20, 10, createRandomSpeed() * 2, Color.pink, 30);
+        Car c5 = new Car(10, 10, 170, 20, 10, createRandomSpeed() * 2 , Color.green, 20);
+        Car c6 = new Car(10, 10, 200, 20, 10, createRandomSpeed() * 2, Color.orange, 30);
 
         cars[0] = c1;
         cars[1] = c2;
+        cars[2] = c3;
+        cars[3] = c4;
+        cars[4] = c5;
+        cars[5] = c6;
 
+
+
+       JTextField info = new JTextField();
+       info.setText(AddPlayers);
 
 
 
@@ -125,8 +137,13 @@ public class CarRaceGUI extends JFrame implements Runnable{
             {
                 cars[i].move(cars[i].getSpeed());
                 cars[i].draw(gRef);
+                if(cars[i].getPosition_X()>=1920){
+                    break;
+                }
             }
     }
+
+
 
 
 

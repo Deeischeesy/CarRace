@@ -11,6 +11,8 @@ public abstract class MainMenu extends JFrame implements KeyListener,MouseListen
 
     private static boolean[] mouseState = new boolean[3];
 
+    AddPlayers newPlayer = new AddPlayers();
+
     public static void main(String args[]) {
 
 
@@ -66,7 +68,10 @@ public abstract class MainMenu extends JFrame implements KeyListener,MouseListen
         Players.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AddPlayers.main(null);
+                Players.setVisible(false);
+                new AddPlayers().setVisible(true);//Main form after login form
+                AddPlayers newPlayer = new AddPlayers();
+
             }
         });
 

@@ -7,83 +7,40 @@ import java.util.Scanner;
 public class AddPlayers extends JPanel {
 
 
-    private String bet = "";
-
-
-
-    private String car = "";
+    private static int bet;
+    private static String choice = "";
     static String name = "";
-    private static JTextField ageField;
-    private static JLabel res;
-
-    private AddPlayers() {
-
-        setLayout(new BorderLayout());
-
-        JPanel northPanel = new JPanel();
-        northPanel.setLayout(new FlowLayout());
-        JLabel label = new JLabel("Please enter your name:");
-        northPanel.add(label);
-        northPanel.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-        northPanel.setPreferredSize(new Dimension(100, 100));
-
-        JPanel southPanel = new JPanel();
-        southPanel.setLayout(new FlowLayout());
-        JLabel label2 = new JLabel("Please enter your choice of car: ");
-        southPanel.add(label2);
-        southPanel.setAlignmentX(JComponent.CENTER_ALIGNMENT);
-        southPanel .setPreferredSize(new Dimension(100, 100));
 
 
-        ageField = new JTextField(15);
-        northPanel.add(ageField);
-        add(northPanel, BorderLayout.NORTH);
-
-        ageField = new JTextField(15);
-        southPanel.add(ageField);
-        add(southPanel, BorderLayout.SOUTH);
+       public AddPlayers()
+       {
 
 
 
-        JPanel centerPanel = new JPanel();
+        JPanel panel1 = new JPanel();
+        name = JOptionPane.showInputDialog(null, "Please Enter Player Name: ", "Player Reg", JOptionPane.INFORMATION_MESSAGE);
 
+        JPanel panel2 = new JPanel();
+        choice = JOptionPane.showInputDialog(null, "Please enter a choice (c1/c2/c3/c4/c5)", "Choose Car", JOptionPane.INFORMATION_MESSAGE);
 
-        res = new JLabel();
-        res.setVisible(false);
-        centerPanel.add(res);
-
-        add(centerPanel, BorderLayout.CENTER);
-
-
+        JPanel panel3 = new JPanel();
+        bet = Integer.parseInt(JOptionPane.showInputDialog(null, "Please enter your amount", "Amount", JOptionPane.INFORMATION_MESSAGE));
     }
 
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("Players Reg");
-        frame.add(new AddPlayers());
-        frame.setVisible(true);
-        frame.setSize(300, 300);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(new Dimension(200, 200));
-        frame.setLocationRelativeTo(null);//Centering the Jframe in the middle
-    }
-
-
-
-
-    public String getBet() {
+    public int getBet() {
         return bet;
     }
 
-    public void setBet(String bet) {
+    public void setBet(int bet) {
         this.bet = bet;
     }
 
-    public String getCar() {
-        return car;
+    public String getChoice() {
+        return choice;
     }
 
-    public void setCar(String car) {
-        this.car = car;
+    public void setChoice(String choice) {
+        this.choice = choice;
     }
 
     public String getName() {
@@ -93,4 +50,17 @@ public class AddPlayers extends JPanel {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Name :" + name +
+                "bet : " + bet +
+                ", choice : " + choice + '\'' +
+                '}';
+    }
 }
+
+
+
+
+
