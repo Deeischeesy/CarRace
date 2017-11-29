@@ -22,7 +22,12 @@ public abstract class MainMenu extends JFrame implements KeyListener,MouseListen
         MainMenuPanel.setBackground(Color.RED);
 
         JButton startGame = new JButton("Start");
+        JButton Players = new JButton("Add Players");
         startGame.setVisible(true);
+        Players.setVisible(true);
+
+
+
 
         System.out.println("Previous Bettors:" );
         ArrayList<Bettors>allBettors = new ArrayList<Bettors>();
@@ -53,17 +58,17 @@ public abstract class MainMenu extends JFrame implements KeyListener,MouseListen
 
         MainMenuFrame.add(MainMenuPanel);
         MainMenuPanel.add(startGame);
+        MainMenuPanel.add(Players);
         MainMenuFrame.setVisible(true);
 
-        String bet = "";
-        String car = "";
-
-                  JOptionPane.showInputDialog(null,"Please enter your name","Player Registration");
-                  bet = JOptionPane.showInputDialog(null,"Please enter your amount");
-                  car = JOptionPane.showInputDialog(null,"Please choose a car ");
 
 
-
+        Players.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                AddPlayers.main(null);
+            }
+        });
 
 
 

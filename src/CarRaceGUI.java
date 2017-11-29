@@ -45,6 +45,7 @@ public class CarRaceGUI extends JFrame implements Runnable{
                                        try {
                                            CarRaceGUI window = new CarRaceGUI();
                                            //window.frame.setVisible(true);
+                                           window.setTitle("Car Race" + AddPlayers.name);
                                        } catch (Exception e) {
                                            e.printStackTrace();
                                        }
