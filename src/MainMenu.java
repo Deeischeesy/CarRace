@@ -21,7 +21,7 @@ public abstract class MainMenu extends JFrame implements KeyListener,MouseListen
         MainMenuFrame.setLocationRelativeTo(null);//Centering the Jframe in the middle
 
         JPanel MainMenuPanel = new JPanel();
-        MainMenuPanel.setBackground(Color.RED);
+        MainMenuPanel.setBackground(Color.BLUE);
 
         JButton startGame = new JButton("Start");
         JButton Players = new JButton("Add Players");
@@ -64,7 +64,7 @@ public abstract class MainMenu extends JFrame implements KeyListener,MouseListen
         MainMenuFrame.setVisible(true);
 
 
-
+//Calling for the class AddPlayers here so that when i press the button Players it will then open it up and ask the user for their input
         Players.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

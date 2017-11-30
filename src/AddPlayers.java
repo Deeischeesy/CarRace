@@ -1,8 +1,4 @@
 import javax.swing.*;
-import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.util.Scanner;
 
 public class AddPlayers extends JPanel {
 
@@ -19,6 +15,7 @@ public class AddPlayers extends JPanel {
 
         JPanel panel1 = new JPanel();
         name = JOptionPane.showInputDialog(null, "Please Enter Player Name: ", "Player Reg", JOptionPane.INFORMATION_MESSAGE);
+
 
         JPanel panel2 = new JPanel();
         choice = JOptionPane.showInputDialog(null, "Please enter a choice (c1/c2/c3/c4/c5)", "Choose Car", JOptionPane.INFORMATION_MESSAGE);
@@ -53,8 +50,8 @@ public class AddPlayers extends JPanel {
 
     @Override
     public String toString() {
-        return "Name :" + name +
-                "bet : " + bet +
+        return "Name :" + name + "\'"+
+                "bet : " + bet +  "\'" +
                 ", choice : " + choice + '\'' +
                 '}';
     }

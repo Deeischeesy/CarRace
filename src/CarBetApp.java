@@ -19,7 +19,7 @@ public class CarBetApp extends Bettors {
         super(playerName, Address, AccountNumber, balance, bets);
     }
 
-
+//Here i am hard coding in the values that are neccsary to save previous bettors in the system , you will be able to see these in the system out print window down below
     public static void main(String args[]) {
 
 

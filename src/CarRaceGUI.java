@@ -84,9 +84,9 @@ public class CarRaceGUI extends JFrame implements Runnable{
 
 
 
+       //Setting all the car objects here and i then call them in the paint method down below */
 
-
-        cars = new Car[10];
+        cars = new Car[6];
 
         Car c1 = new Car(10, 10, 50, 20, 10, createRandomSpeed() * 2 , Color.YELLOW, 20);
         Car c2 = new Car(10, 10, 80, 20, 10, createRandomSpeed() * 2, Color.RED, 30);
@@ -105,7 +105,7 @@ public class CarRaceGUI extends JFrame implements Runnable{
 
 
        JTextField info = new JTextField();
-       info.setText(AddPlayers);
+       info.setText(AddPlayers.name);
 
 
 
@@ -135,11 +135,19 @@ public class CarRaceGUI extends JFrame implements Runnable{
         for(int i=0;i<cars.length;i++)
             if(cars[i]!=null)
             {
-                cars[i].move(cars[i].getSpeed());
-                cars[i].draw(gRef);
-                if(cars[i].getPosition_X()>=1920){
-                    break;
+                if(cars[i].getPosition_X()< 1920){
+                    /* here i am trying to add a simple collision to say when each car reaches the width of the screen which is
+                1920 that it will stop . I have added the system out print to show that they are stopping either 10 above or 10 before 1920 */
+
+                    cars[i].move(cars[i].getSpeed());
+                    System.out.println(cars[i].getPosition_X());
+                    cars[i].draw(gRef);
                 }
+                else{
+
+                    cars[i].setPosition_X(1920);
+                }
+
             }
     }
 
@@ -196,7 +204,9 @@ public class CarRaceGUI extends JFrame implements Runnable{
             gameThread.start();
         }
     }
-
+//Here i have created a user defined method to be able to give each car a random speed which i then call up for the value in the car objects
+    //i have set it between 50 and 1 so that the speed dosesnt get to high to be able to see the cars move also .
+    //however this does affect the collision that i have in my paint method because if a cars speed is 30 it will got 10 past 1920 finishing at 1930 which you can see in the out print window
 
     public int createRandomSpeed(){
 
